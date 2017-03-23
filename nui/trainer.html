@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <link href="trainer.css" rel="stylesheet" type="text/css" />
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="trainer.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="trainercontainer" style="display: none;">
+            <!-- Title -->
+            <p class="traineroption trainertitle">Scorpion Trainer</p>
+            
+            <!-- Main menu -->
+            
+            <div id="mainmenu">
+                <p class="traineroption" data-sub="playermenu">Player</p>
+                <p class="traineroption" data-sub="vehiclesmenu">Vehicles</p>
+                <p class="traineroption" data-sub="weaponsmenu">Weapons</p>
+                <p class="traineroption" data-sub="settingsmenu">Settings</p>
+                <p class="traineroption" data-sub="aboutmenu">About</p>
+            </div>
+            
+            <!-- Player menu -->
+            
+            <div id="playermenu" data-parent="mainmenu">
+                <p class="traineroption" data-sub="playerskinmenu">Change Skin</p>
+                <p class="traineroption" data-action="player god" data-state="OFF">Godmode</p>
+                <p class="traineroption" data-action="player stamina" data-state="OFF">Unlimited Stamina</p>
+                <p class="traineroption" data-action="player heal">Heal Player</p>
+                <p class="traineroption" data-action="player armor">Add Armor</p>
+                <p class="traineroption" data-action="player suicide">Suicide</p>
+            </div>
+            
+            <div id="playerskinmenu" data-parent="playermenu">
+                <p class="traineroption" data-action="playerskin a_m_m_business_01">Business Guy</p>
+                <p class="traineroption" data-action="playerskin a_m_m_fatlatin_01">Fat Latin</p>
+                <p class="traineroption" data-action="playerskin a_m_y_hipster_01">Hipster</p>
+            </div>
+            
+            <!-- Vehicles menu -->
+            
+            <div id="vehiclesmenu" data-parent="mainmenu">
+                <p class="traineroption" data-sub="vehiclesspawnmenu">Spawn Vehicle</p>
+                <p class="traineroption" data-sub="vehiclescolormenu">Vehicle Color</p>
+                <p class="traineroption" data-action="veh fix">Fix Vehicle</p>
+                <p class="traineroption" data-action="veh clean">Clean Vehicle</p>
+            </div>
+            
+            <div id="vehiclesspawnmenu" data-parent="vehiclesmenu">
+                <p class="traineroption" data-action="vehspawn despawn" data-state="ON">Automatic Despawn</p>
+                <p class="traineroption" data-action="vehspawn input">Spawn Vehicle by Name</p>
+                <p class="traineroption" data-action="vehspawn ADDER">Adder</p>
+                <p class="traineroption" data-action="vehspawn FAGGIO">Faggio</p>
+                <p class="traineroption" data-action="vehspawn FUTO">Futo</p>
+                <p class="traineroption" data-action="vehspawn INGOT">Ingot</p>
+                <p class="traineroption" data-action="vehspawn SULTAN">Sultan</p>
+            </div>
+            
+            <div id="vehiclescolormenu" data-parent="vehiclesmenu">
+                <p class="traineroption" data-action="vehcolor 0,0,0">Black</p>
+                <p class="traineroption" data-action="vehcolor 0,0,255">Blue</p>
+                <p class="traineroption" data-action="vehcolor 0,255,0">Green</p>
+                <p class="traineroption" data-action="vehcolor 255,0,0">Red</p>
+                <p class="traineroption" data-action="vehcolor 255,255,255">White</p>
+            </div>
+            
+            <!-- Weapons menu -->
+            
+            <div id="weaponsmenu" data-parent="mainmenu">
+                <p class="traineroption" data-sub="weaponitemmenu" data-subdata="WEAPON_KNIFE">Knife</p>
+                <p class="traineroption" data-sub="weaponitemmenu" data-subdata="WEAPON_BAT">Baseball Bat</p>
+                <p class="traineroption" data-sub="weaponitemmenu" data-subdata="WEAPON_PISTOL">Pistol</p>
+                <p class="traineroption" data-sub="weaponitemmenu" data-subdata="WEAPON_ASSAULTRIFLE">Assault Rifle</p>
+            </div>
+            
+            <div id="weaponitemmenu" data-parent="weaponsmenu">
+                <p class="traineroption" data-action="wepgive *">Give</p>
+                <p class="traineroption" data-action="wepremove *">Remove</p>
+            </div>
+            
+            <!-- Settings menu -->
+            
+            <div id="settingsmenu" data-parent="mainmenu">
+                <p class="traineroption" data-sub="settingsweathermenu">Change Weather</p>
+				<p class="traineroption" data-sub="settingstimemenu">Change Time</p>
+            </div>
+				
+			<div id="settingsweathermenu" data-parent="settingsmenu">
+				<p class="traineroption" data-action="weather EXTRASUNNY">Extra Sunny</p>
+				<p class="traineroption" data-action="weather CLEAR">Clear</p>
+				<p class="traineroption" data-action="weather CLOUDS">Clouds</p>
+				<p class="traineroption" data-action="weather OVERCAST">Overcast</p>
+				<p class="traineroption" data-action="weather RAIN">Rain</p>
+				<p class="traineroption" data-action="weather CLEARING">Clearing</p>
+				<p class="traineroption" data-action="weather THUNDER">Thunder</p>
+				<p class="traineroption" data-action="weather SMOG">Smog</p>
+				<p class="traineroption" data-action="weather FOGGY">Foggy</p>
+				<p class="traineroption" data-action="weather XMAS">Xmas</p>
+				<p class="traineroption" data-action="weather SNOWLIGHT">Light Snow</p>
+				<p class="traineroption" data-action="weather BLIZZARD">Blizzard</p>
+			</div>
+				
+			<div id="settingstimemenu" data-parent="settingsmenu">
+				<p class="traineroption" data-action="time 6">Morning</p>
+				<p class="traineroption" data-action="time 12">Midday</p>
+				<p class="traineroption" data-action="time 18">Evening</p>
+				<p class="traineroption" data-action="time 0">Midnight</p>
+			</div>
+            
+            <!-- About menu -->
+            
+            <div id="aboutmenu" data-parent="mainmenu">
+                <p class="traineroption">Version: 1.1.0</p>
+                <p class="traineroption">Made By Mr.Scammer</p>
+                <p class="traineroption">Your info here</p>
+            </div>
+        </div>
+    </body>
+</html>
